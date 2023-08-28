@@ -3,11 +3,21 @@
 
 A virtual space for Formula One fans to show off their favorite driver and add their own.
 
+# User Stories
+As a logged in user, I want to see all drivers, to pick a favorite.
+As a logged in user, I want to navigate to each driver profile, to see information on them.
+As a logged in user, I want to choose any driver as a favorite.
+As a logged in user, I want to navigate to the favorites tab to see my selected driver.
+As a logged in user, I want to navigate to the home page, and be able to log out.
+As a logged in user, I want to add edit or delete my comments on my favorite drivers profile.
+As a logged in user, I want to add my own driver to the database.
+As a logged out user, I want to be able to sign in.
+
 # Screenshot
 
 ![image](https://github.com/JordonM/Unit2Project/assets/14878928/3f1025be-43ef-4567-b494-f19cbf2fd86f)
 ![image](https://github.com/JordonM/Unit2Project/assets/14878928/8e5a4f8b-0db0-4a71-bbf6-713beefe5da4)
-![image](https://github.com/JordonM/Unit2Project/assets/14878928/7af6545b-bf8e-4aa9-9a53-7859f39128ca)
+![image](https://github.com/JordonM/Unit2Project/assets/14878928/075008f9-82ce-4394-b042-de4657192008)
 ![image](https://github.com/JordonM/Unit2Project/assets/14878928/ce96e893-5bab-44fb-83d6-e6ba33082ab7)
 ![image](https://github.com/JordonM/Unit2Project/assets/14878928/738bb4c7-f2a8-4556-b041-3114985f1bcd)
 
@@ -22,7 +32,7 @@ A virtual space for Formula One fans to show off their favorite driver and add t
 # Getting Started
 
 ![image](https://github.com/JordonM/Unit2Project/assets/14878928/f4c01417-f942-4850-88c4-67e7b4587ef4)
-[Click to enter DriveHive](your deployment url here)
+
 
 # Routing 
 |HTTP<br>Method|URL<br>Endpoint|Controller<br>Action|Purpose|
