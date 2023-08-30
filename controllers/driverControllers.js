@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
     Driver.find({})
         .then(drivers => {
             console.log('found these drivers', drivers)
+            console.log('req user', req.user)
 
             res.render('drivers/index', { drivers, title: 'All Drivers' })
         })
