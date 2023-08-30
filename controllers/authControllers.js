@@ -4,10 +4,8 @@ const passport = require('passport')
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
-    // we'll tell which strategy to use
     'google',
     {
-    // this requests the user's profile and email
     scope: ['profile', 'email']
     }
 ))
@@ -16,15 +14,15 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
     'google',
     {
-    successRedirect: '/',
-    failureRedirect: '/'
+    successRedirect: '/drivers',
+    failureRedirect: '/drivers'
     }
 ))
 
 // OAuth logout route
 router.get('/logout', function(req, res) {
     req.logout(function() {
-        res.redirect('/')
+        res.redirect('/drivers')
     })
 })
 

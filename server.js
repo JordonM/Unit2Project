@@ -3,16 +3,16 @@ require('dotenv').config()
 const path = require('path')
 const middleware = require('./utils/middleware')
 
-// we'll build a middleware function to user in this file
 
-// our routers/controllers will be imported here
+
+// routers/controllers 
 const AuthRouter = require('./controllers/authControllers')
 const DriverRouter = require('./controllers/driverControllers')
 const CommentRouter = require('./controllers/commentControllers')
 
 const app = express()
 
-// set up our view engine
+// view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -26,11 +26,10 @@ middleware(app)
 ////////////////
 app.get('/', (req, res) => {
     res.redirect('/drivers')
-
 })
 
-  
 
+  
 app.use('/', AuthRouter)
 app.use('/drivers', DriverRouter)
 app.use('/comments', CommentRouter)

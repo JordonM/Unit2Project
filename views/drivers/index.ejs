@@ -1,0 +1,15 @@
+<%- include('../partials/nav') %>
+
+<div class="container-md">
+    <ul>
+        <% drivers.forEach(driver => {%>
+            <li>
+                <a href="/drivers/<%= driver._id %>">
+                    <%= driver.name %>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+</div>
+
+<%- include('../partials/footer') %>
