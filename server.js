@@ -28,13 +28,7 @@ app.get('/', (req, res) => {
     res.redirect('/drivers')
 
 })
-app.get('/drivers', function (req, res) {
-    res.send('<h1>Hello Drivers!</h1>');
-});
-app.get('/comments', function (req, res) {
-    res.send('<h1>Hello Comments!</h1>');
-});
-  
+
   
 
 app.use('/', AuthRouter)
