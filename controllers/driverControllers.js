@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
         .catch(error => console.error)
 })
 router.get('/home', checkLogin, (req, res) => {
-    res.render('drivers/home', { title: 'Add a new Driver'})
+    res.render('drivers/home', { title: 'Test'})
 })
 
 router.get('/index', checkLogin, (req, res) => {
@@ -35,6 +35,9 @@ router.get('/index', checkLogin, (req, res) => {
 // new
 router.get('/new', checkLogin, (req, res) => {
     res.render('drivers/new', { title: 'Add a new Driver'})
+})
+router.get('/about', checkLogin, (req, res) => {
+    res.render('drivers/about', { title: 'Test'})
 })
 // Create
 router.post('/', checkLogin, (req, res) => {
