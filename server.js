@@ -25,7 +25,7 @@ middleware(app)
 //// Routes ////
 ////////////////
 app.get('/', (req, res) => {
-    res.redirect('/')
+    res.redirect('/drivers')
 })
 
 
