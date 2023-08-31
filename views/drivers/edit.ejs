@@ -1,0 +1,24 @@
+<%- include('../partials/nav') %>
+
+<div class="container-sm">
+    <form action="/drivers/<%= driver._id %>?_method=PATCH" method="POST">
+        <fieldset>
+            <label class="form-label">Name:</label>
+            <input type="text" class="form-control" name="name" placeholder="What kind of driver?" required value="<%= driver.name %>">
+            <label class="form-label">Color:</label>
+            <input type="color" class="form-control" name="color" placeholder="What color is it?" required value="<%= driver.color %>">
+            <label class="form-label">Ready To Eat:</label>
+            <input 
+                type="checkbox" class="form-check-control" name="readyToEat"
+                <% if (driver.readyToEat) {%>  
+                    checked
+                <% } %>
+            >
+            <br>
+            <hr>
+            <input type="submit" class="btn btn-success" value="Edit <%= driver.name %>">
+        </fieldset>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

@@ -25,6 +25,13 @@ router.get('/', (req, res) => {
         })
         .catch(error => console.error)
 })
+router.get('/home', checkLogin, (req, res) => {
+    res.render('drivers/home', { title: 'Add a new Driver'})
+})
+
+router.get('/index', checkLogin, (req, res) => {
+    res.render('drivers/index', { title: 'Add a new Driver!'})
+})
 // new
 router.get('/new', checkLogin, (req, res) => {
     res.render('drivers/new', { title: 'Add a new Driver'})

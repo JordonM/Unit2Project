@@ -29,7 +29,7 @@ router.post('/:driverId', checkLogin, (req, res) => {
         })
         // redirect
         .then(driver => {
-            res.redirect(`/driver/${driver._id}`)
+            res.redirect(`/home`)
         })
         // handle errors
         .catch(error => console.error)
@@ -69,7 +69,7 @@ router.delete('/:driverId/:commentId', checkLogin, (req, res) => {
         })
         .then(driver => {
             // redirect to the show page
-            res.redirect(`/driver/${driver._id}`)
+            res.redirect(`/home`)
         })
         .catch(error => console.error)
 })

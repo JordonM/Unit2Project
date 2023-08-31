@@ -25,14 +25,16 @@ middleware(app)
 //// Routes ////
 ////////////////
 app.get('/', (req, res) => {
-    res.redirect('/drivers')
+    res.redirect('/')
 })
 
 
   
 app.use('/', AuthRouter)
 app.use('/drivers', DriverRouter)
+app.use('/home', DriverRouter)
 app.use('/comments', CommentRouter)
+app.use('/about', DriverRouter)
 
 //////////////////////////
 //// Server Listener  ////
