@@ -7,7 +7,6 @@ A virtual space for Formula One fans to show off their favorite driver and add t
 - As a logged in user, I want to see all drivers, to pick a favorite.
 - As a logged in user, I want to navigate to each driver profile, to see information on them.
 - As a logged in user, I want to choose any driver as a favorite.
-- As a logged in user, I want to navigate to the favorites tab to see my selected driver.
 - As a logged in user, I want to navigate to the home page, and be able to log out.
 - As a logged in user, I want to add edit or delete my comments on my favorite drivers profile.
 - As a logged in user, I want to add my own driver to the database.
@@ -30,7 +29,8 @@ A virtual space for Formula One fans to show off their favorite driver and add t
 
 # Getting Started
 
-![image](https://github.com/JordonM/Unit2Project/assets/14878928/f4c01417-f942-4850-88c4-67e7b4587ef4)
+![image](https://github.com/JordonM/Unit2Project/assets/14878928/d24b24f0-ac43-4925-bc05-1bb6774a3c33)
+
 
 
 # Routing 
@@ -48,6 +48,7 @@ A virtual space for Formula One fans to show off their favorite driver and add t
 
 #### Comments
 
+
 |HTTP<br>Method|URL<br>Endpoint|Controller<br>Action|Purpose|
 |---|---|---|---|
 | n/a | n/a | index action | View all the comments for a driver - no route needed since comments are embedded and displayed with the driver |
@@ -57,6 +58,14 @@ A virtual space for Formula One fans to show off their favorite driver and add t
 | GET | /comments/:id/edit | commentsCtrl.edit | View a form for editing a comment (restrict to user who submitted the comment) |
 | PUT | /comments/:id| commentsCtrl.update | Handle the edit comment form being submitted (restrict to user who submitted the comment) |
 | DELETE | /comments/:id| commentsCtrl.delete | Delete a comment (restrict to user who submitted the comment) |
+
+# Deployment Link 
+https://drivehive.fly.dev
+
+#### Screenshots
+- ![image](https://github.com/JordonM/Unit2Project/assets/14878928/1d4a5475-236c-4974-9566-a41b82e67802)
+- ![image](https://github.com/JordonM/Unit2Project/assets/14878928/2a4e009f-bdec-4e74-9c01-14ae3678bee2)
+- ![image](https://github.com/JordonM/Unit2Project/assets/14878928/ff1d5ca7-33ce-4d66-a631-cd8cc7f3f96f)
 
 
 # Next Steps
