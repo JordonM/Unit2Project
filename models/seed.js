@@ -10,7 +10,7 @@ const db = mongoose.connection
 
 
 db.on('open', () => {
-    // array of starter resources(fruits)
+
     const startDriver = [
         { name: 'Lance Stroll', color: 'orange', favorite: true },
         { name: 'Lewis Hamilton', color: 'purple', favorite: true },
@@ -21,8 +21,7 @@ db.on('open', () => {
     // when we seed the database, we remove everything from this collection
     Driver.deleteMany({ owner: null })
         .then(() => {
-            // then add our startfruits to the collection
-            // then close our connection to the db
+
             Driver.create(startDriver)
                 .then(data => {
                     console.log('these are the drivers: \n', data)
