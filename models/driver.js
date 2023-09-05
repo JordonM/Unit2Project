@@ -26,10 +26,7 @@ const driverSchema = new Schema({
     comments: [commentSchema]
 }, { timestamps: true })
 
-// make the fruit model
-// the model method takes two arguments
-// the first is what we call our model
-// the second is the schema used to build the model
+
 const Driver = model('Driver', driverSchema)
 
 //////////////////////////

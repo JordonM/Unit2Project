@@ -18,7 +18,7 @@ router.post('/:driverId', checkLogin, (req, res) => {
     // need to assign owner
     req.body.author = req.user._id
 
-    // find the fruit
+    
     Driver.findById(req.params.driverId)
         // push the comment into the comments array
         // save the fruit
@@ -52,7 +52,7 @@ router.patch('/:id', checkLogin, (req, res) => {
 router.delete('/:driverId/:commentId', checkLogin, (req, res) => {
     const fId = req.params.driverId
     const cId = req.params.commentId
-    // find the fruit
+   
     Driver.findById(fId)
         .then(driver => {
             // isolate the comment
