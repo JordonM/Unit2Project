@@ -9,7 +9,15 @@
                 </a>
                 <br>
                 <a href="/drivers/<%= driver._id %>">
-                    <img src="<%= driver.image %>" 
+                    <img src="<%= driver.image %>" >
+                    <div class="color-div border border-dark text-center" style="background-color: <%= driver.color %>"></div>
+                    <div class=" text-center">
+                        <% if (driver.favorite) {%>
+                            <h6>This Driver Is In Your Favorites</h6>
+                        <% } else { %>
+                            <h6>This Driver Is Not In Favorites</h6>
+                        <% } %>
+                    </div>
                 </a>
             </li>
         <% }) %>

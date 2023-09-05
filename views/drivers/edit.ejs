@@ -5,9 +5,9 @@
         <fieldset>
             <label class="form-label">Name:</label>
             <input type="text" class="form-control" name="name" placeholder="What kind of driver?" required value="<%= driver.name %>">
-            <label class="form-label">Color:</label>
-            <input type="color" class="form-control" name="color" placeholder="What color is it?" required value="<%= driver.color %>">
-            <label class="form-label">Favorite:</label>
+            <label class="form-label">Team Color:</label>
+            <input type="color" class="form-control" name="color" placeholder="What color is it?" required value="<%= driver.color %>"> <br>
+            <label class="form-label">Favorite?</label>
             <input type="checkbox" class="form-check-control" name="favorite"
             <% if (driver.favorite) {%>  
                 checked

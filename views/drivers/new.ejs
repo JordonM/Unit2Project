@@ -2,17 +2,20 @@
 
 <div class="container-sm">
     <form action="/drivers" method="POST">
+        <title>ADD A NEW DRIVER!</title>
         <fieldset>
-            <label class="form-label">Name:</label>
+            <label class="form-label">Driver Name:</label>
             <input type="text" class="form-control" name="name" placeholder="" required>
-            <label class="form-label">Color:</label>
+            <label class="form-label">Team Color:</label>
             <input type="color" class="form-control" name="color" placeholder="COLOR" required>
             <label class="form-label">Image:</label>
             <input type="file" name="image" accept="image/png, image/jpeg" />
+            <br>
+            <label class="form-label">Favorite?</label>
             <input type="checkbox" class="form-check-control" name="favorite" >
             <br>
             <hr>
-            <input type="submit" class="btn btn-success" value="">
+            <input type="submit" class="btn btn-success" value="Submit">
         </fieldset>
     </form>
 </div>
