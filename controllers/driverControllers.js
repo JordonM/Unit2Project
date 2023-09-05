@@ -10,6 +10,7 @@ const checkLogin = require('../utils/ensureLoggedIn')
 // const axios = require('axios')
 
 const router = express.Router()
+const multer = require('multer');
 
 //////////////////////////////
 //// Routes + Controllers ////
@@ -44,7 +45,7 @@ router.post('/', checkLogin, (req, res) => {
     // need to assign owner
     req.body.owner = req.user._id
     // handle our checkbox
-    req.body.readyToEat = req.body.readyToEat === 'on' ? true : false
+    req.body.favorite = req.body.favorite === 'on' ? true : false
 
     console.log(req.body)
     Driver.create(req.body)
@@ -69,7 +70,7 @@ router.get('/edit/:id', checkLogin, (req, res) => {
 // Update
 router.patch('/:id', checkLogin, (req, res) => {
     // handle our checkbox
-    req.body.readyToEat = req.body.readyToEat === 'on' ? true : false
+    req.body.favorite = req.body.favorite === 'on' ? true : false
 
     Driver.findById(req.params.id)
         .then(driver => {
@@ -118,6 +119,16 @@ router.get('/:id', (req, res) => {
         })
         .catch(error => console.error)
 })
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb (null, "public/images");
+    }, 
+    filename: function (req, file, cb) {
+        cb (null, file.filename + "_" + Date.now() + "_" + file.originalname);
+    },
+});
+
 
 ////////////////////////////
 //// Export the Router  ////

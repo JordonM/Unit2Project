@@ -10,11 +10,14 @@ const driverSchema = new Schema({
     name: {
         type: String
     },
-    number: {
+    color: {
         type: String
     },
     favorite: {
         type: Boolean
+    },
+    image: {
+        type: String
     },
     owner: {
         type: Schema.Types.ObjectId,

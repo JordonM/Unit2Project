@@ -7,13 +7,14 @@
             <input type="text" class="form-control" name="name" placeholder="What kind of driver?" required value="<%= driver.name %>">
             <label class="form-label">Color:</label>
             <input type="color" class="form-control" name="color" placeholder="What color is it?" required value="<%= driver.color %>">
-            <label class="form-label">Ready To Eat:</label>
-            <input 
-                type="checkbox" class="form-check-control" name="readyToEat"
-                <% if (driver.readyToEat) {%>  
-                    checked
-                <% } %>
-            >
+            <label class="form-label">Favorite:</label>
+            <input type="checkbox" class="form-check-control" name="favorite"
+            <% if (driver.favorite) {%>  
+                checked
+            <% } %>
+        >
+            <label class="form-label">Image:</label>
+            <input type="file" name="image" accept="image/png, image/jpeg" />
             <br>
             <hr>
             <input type="submit" class="btn btn-success" value="Edit <%= driver.name %>">

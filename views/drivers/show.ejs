@@ -7,7 +7,7 @@
     <div class="row justify-content-between">
         <article class="col-5 border border-dark">
             <div class="border border-dark text-center">
-                <% if (driver.readyToEat) {%>
+                <% if (driver.favorite) {%>
                     <h6>Ripe & Ready to Eat</h6>
                 <% } else { %>
                     <h6>Not Ripe Yet</h6>
@@ -15,6 +15,10 @@
             </div>
             <% if (driver.color) {%>
                 <div class="color-div border border-dark text-center" style="background-color: <%= driver.color %>">
+                </div>
+            <% } %>
+            <% if (driver.image) {%>
+                <img src="<%= driver.image %>">
                 </div>
             <% } %>
             <% if (driver.owner?._id.equals(user?._id)) {%>
