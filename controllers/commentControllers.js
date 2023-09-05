@@ -20,8 +20,7 @@ router.post('/:driverId', checkLogin, (req, res) => {
 
     
     Driver.findById(req.params.driverId)
-        // push the comment into the comments array
-        // save the fruit
+
         .then(driver => {
             driver.comments.push(req.body)
 
